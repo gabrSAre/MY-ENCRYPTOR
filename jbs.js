@@ -1,1 +1,1 @@
-alert('ENCRIPTADOR DE TEXTO');
+alert('ENCRIPTADOR');
