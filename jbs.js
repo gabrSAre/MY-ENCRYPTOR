@@ -1,0 +1,1 @@
+alert('ENCRIPTADOR DE TEXTO');
