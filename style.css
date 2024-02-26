@@ -2,8 +2,25 @@ body{
     background: #677A7E;
 }
 
+header{
+    height:280px;
+    width: 204px;
+    
+}
+
 .logosrc{
     width: 204px;
-    height: 210px;
 }
+
+#espacio-digitacion{
+    background:#677A7E;
+    width: 556px;
+    height: 431px;
+    font-size: 24px;
+    color:#4C3B1B
+    
+
+}
+
+
 
