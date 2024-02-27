@@ -3,7 +3,7 @@ body{
 }
 
 header{
-    height:280px;
+    height:270px;
     width: 204px;
     
 }
@@ -13,6 +13,7 @@ header{
 }
 
 #espacio-digitacion{
+    margin:0 0 0 102px;
     background:#677A7E;
     width: 556px;
     height: 431px;
