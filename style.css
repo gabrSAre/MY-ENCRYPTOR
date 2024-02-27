@@ -1,27 +1,132 @@
 body{
-    background: #677A7E;
+    background:linear-gradient(#677A7E 78%, #1a7e8b);
+   
 }
 
 header{
-    height:270px;
     width: 204px;
-    
+    height: 220px;
 }
 
 .logosrc{
     width: 204px;
+    height: 210px;
+    box-shadow: 15px 15px 2px #00000025;
 }
 
-#espacio-digitacion{
+
+.caja-encriptando{
+    display: inline-block;
+    margin: 70px 0 0 90px;
+}
+
+
+.espacio-texto{
+    background:transparent;
     margin:0 0 0 102px;
-    background:#677A7E;
+    padding: 24px;
     width: 556px;
     height: 431px;
     font-size: 24px;
-    color:#4C3B1B
-    
+    outline: none;
+    color:#4C3B1B;
+    border : 0; 
+}
+
+.espacio-texto::placeholder{
+    color:#4C3B1B;
+    font-size:25px;
+    text-shadow: 3px 4px 2px #00000025;
 
 }
 
 
+.caja-encriptando p{
+    margin:0 0 10px 130px;
+    font-size: 20px;
+}
+
+#boton-encriptar{
+    display: block;
+    margin:0 0 15px 95px;
+    width: 357px;
+    height: 57px;
+    border-radius: 10px;
+    background: #8FBAAB;
+    color:#5F3030;
+    font-size: 20px;
+    border:0;
+    box-shadow: 0 0 9px #000000;
+}
+#boton-desencriptar{
+    display: block;
+    margin:0 0 10px 95px;
+    width: 357px;
+    height: 57px;
+    border-radius: 10px;
+    background: #8FBAAB;
+    color:#5F3030;
+    font-size: 20px;
+    border: 0;
+    box-shadow: 0 0 9px #000000;
+}
+
+.mensaje-encriptado{
+    display: inline-block;
+    width: 640px;
+    height: 840px;
+    margin:0 0 0 35px;
+    padding: 50px;
+    background: #50503c;
+    border:0;
+    border-radius: 10px;
+    
+}
+
+.espacio-texto-encriptado{
+    background:transparent;
+    margin:0 0 0 102px;
+    padding: 24px;
+    width: 540px;
+    height: 431px;
+    margin: 40px;
+    font-size: 24px;
+    outline: none;
+    color:#FFFFFF;
+    border : 0; 
+
+}
+
+.espacio-texto-encriptado::placeholder{
+    color:#FFFFFF;
+    font-size:25px;
+    text-shadow: 3px 4px 2px #00000025;
+
+}
+
+.logo-dragon{
+    width: 323px;
+}
+
+
+footer{
+    height: 190px;
+    text-align: center; 
+}
+
+
+.logoAlura{
+    width: 29px;
+    height: 25px;
+    margin: 135px 8px 0 0 ;
+
+}
+
+footer p{
+    display: inline-block;
+    vertical-align:top;
+    margin: 140px 0 0 0 ;
+    font-size: 14px;
+   
+}
 
