@@ -11,29 +11,34 @@
 
     <body>
         <header>
-            <img class="logosrc" src="imagenes/DTMLJC+.jpg">  
+            <img class="logosrc" src="imagenes/DTMLJC+.jpg">
         </header>
 
         <main>
-            
-            <section class="caja-encriptando">
-                <textarea class="espacio-texto" required placeholder="ingrese su texto aquí..."></textarea>
-                <P>Solo letras minúsculas y sin acentos</P>
-                <button id="boton-encriptar">Encriptar</button>
-                <button id="boton-desencriptar">Desencriptar</button>
-            </section>
+            <div class="cajas-de-encriptacion">
+                <section class="encriptado-inicial">
+                    <textarea class="mensaje-inicial" required placeholder="ingrese su texto aquí..."></textarea>
+                    <P>Solo letras minúsculas y sin acentos</P>
+                    <button  class="boton-encriptar">Encriptar</button>
+                    <button class="boton-desencriptar">Desencriptar</button>
+                </section>
 
-            <section class="mensaje-encriptado">
-                <textarea class="espacio-texto-encriptado" required placeholder="ingrese su texto aquí..."></textarea>
-                <h1>NINGÚN MENSAJE FUÉ ENCONTRADO</h1>
-                <P>Ingresa el texto que deseas encriptar o desencriptar</P>
-                <img class="logo-dragon" src="imagenes/dragon.jpg.png">
-            </section>
+                <section class="encriptado-final">
+                    <textarea class="mensaje-final" required placeholder="ingrese su texto aquí..."></textarea>
+                    <div class="bloque-imagen">
+                        <h1>NINGÚN MENSAJE FUÉ ENCONTRADO</h1>
+                        <P>Ingresa el texto que deseas encriptar o desencriptar</P>
+                        <img class="logo-dragon" src="imagenes/dragon.jpg.png">
+                    </div>
+                </section>
+            </div>
+        </main>
+            
+            
         </main>
 
         <footer>
-            <img class="logoAlura" src="imagenes/Alura.jpg">
-            <p>Diseñado por GABRIEL SALGADO, estudiande de Alura Latam // DTMLJC+</p>
+            
         </footer>
 
     </body>

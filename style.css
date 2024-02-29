@@ -1,12 +1,186 @@
+/***********************************DISEÑO DEL BODY***************************************/
 body{
+    background: #677A7E;
+}
+
+
+
+/***********************************DISEÑO DEL HEADER*************************************/
+
+header{
+    height: 230px;
+}
+
+
+/**DISEÑO DE LOGO DTMLJC+**/
+.logosrc{
+    width: 204px;
+    height: 210px;
+    box-shadow: 15px 15px 2px #00000025;
+}
+
+
+/***********************************DISEÑO DEL MAIN*************************************/
+
+
+
+/**DISEÑO CAJA DE ENCRIPTADO INICIAL**/
+
+.encriptado-inicial{
+    display: inline-block;
+    width: 650px;
+    height: 651px;
+    margin:50px 0 50px 90px;
+    padding: 8px 0 0 0;
+    float: left;
+    
+}
+
+/**DISEÑO DE LA TEXTAREA INICIAL**/
+
+.mensaje-inicial{
+    background:transparent;
+    margin:0 0 92px 102px;
+    padding: 24px;
+    width: 440px;
+    height: 320px;
+    font-size: 25px;
+    outline: none;
+    color:#4C3B1B;
+    border : 0; 
+
+}
+
+
+.mensaje-inicial::placeholder{
+    color:#4C3B1B;
+    font-size:25px;
+    text-shadow: 3px 4px 2px #00000025;
+}
+
+
+/**DISEÑO PARRAFO INDICATIVO A LOS BOTONES**/
+
+.encriptado-inicial p{
+    font-size: 20px;
+    margin: 0 0 9px 130px;
+}
+
+
+/**DISEÑO DE LOS BOTONES**/
+
+.boton-encriptar{
+    display: block;
+    margin:0 0 15px 95px;
+    width: 357px;
+    height: 57px;
+    border-radius: 10px;
+    background: #8FBAAB;
+    color:#5F3030;
+    font-size: 20px;
+    border:0;
+    box-shadow: 0 0 9px #000000;
+}
+
+
+.boton-desencriptar{
+    display: block;
+    margin:0 0 10px 95px;
+    width: 357px;
+    height: 57px;
+    border-radius: 10px;
+    background: #8FBAAB;
+    color:#5F3030;
+    font-size: 20px;
+    border: 0;
+    box-shadow: 0 0 9px #000000;
+
+}
+
+
+
+
+/**DISEÑO CAJA DE ENCRIPTADO FINAL**/
+
+.encriptado-final{
+    background:linear-gradient(#50503C,#787853 ,#d7d775,#50503C);
+    opacity: 1;
+    display: inline-block;
+    width: 650px;
+    height: 651px;
+    margin:50px 0 50px 185px;
+    padding: 8px 0 0 0;
+    border-radius: 15px;
+    float:left;
+    
+}
+
+/**DISEÑO DEL LA TEXTAREA FINAL**/
+
+.mensaje-final{
+    background:transparent;
+    margin:20px 0 0 110px;
+    padding: 24px;
+    width: 440px;
+    height: 320px;
+    font-size: 25px;
+    outline: none;
+    color:#FFFFFF;
+    border : 0; 
+
+}
+
+.mensaje-final::placeholder{
+    color:#FFFFFF;
+    font-size:25px;
+    text-shadow: 3px 4px 2px #00000025;
+}
+
+
+
+
+
+/**DISEÑO DEL BLOQUE IMAGEN**/
+
+
+.bloque-imagen{
+    width:610px ;
+}
+.encriptado-final h1{
+    display: inline-block;
+    width: auto;
+    font-size: 20px;
+    color:#311212;
+    margin: 60px 0 0 40px;
+    
+}
+
+
+.encriptado-final p {
+    font-size: 20px;
+    color:#311212;
+    display: inline-block;
+    margin: 10px 0 0 20px;
+}
+
+
+
+/**DISEÑO DEL LOGO DRAGON**/
+
+.logo-dragon{
+    display: inline-block;
+    width: 200px;
+    height:200px;
+    
+}
+
+
+
+/*body{
     background:linear-gradient(#677A7E 78%, #1a7e8b);
    
 }
 
-header{
-    width: 204px;
-    height: 220px;
-}
 
 .logosrc{
     width: 204px;
@@ -15,9 +189,13 @@ header{
 }
 
 
+
 .caja-encriptando{
     display: inline-block;
-    margin: 70px 0 0 90px;
+    margin: 70px 0 0 0px;
+    width: 763px;
+    height: 840px;
+    background: #5F3030;
 }
 
 
@@ -73,9 +251,8 @@ header{
 
 .mensaje-encriptado{
     display: inline-block;
-    width: 640px;
+    width: 677px;
     height: 840px;
-    margin:0 0 0 35px;
     padding: 50px;
     background: #50503c;
     border:0;
@@ -85,11 +262,10 @@ header{
 
 .espacio-texto-encriptado{
     background:transparent;
-    margin:0 0 0 102px;
     padding: 24px;
     width: 540px;
     height: 431px;
-    margin: 40px;
+    margin: 24px;
     font-size: 24px;
     outline: none;
     color:#FFFFFF;
@@ -103,6 +279,8 @@ header{
     text-shadow: 3px 4px 2px #00000025;
 
 }
+
+
 
 .logo-dragon{
     width: 323px;
@@ -128,5 +306,7 @@ footer p{
     margin: 140px 0 0 0 ;
     font-size: 14px;
    
-}
+}*/
+
+
 
