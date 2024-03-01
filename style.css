@@ -1,22 +1,23 @@
 /***********************************DISEÑO DEL BODY***************************************/
 body{
-    background: #677A7E;
+    background:linear-gradient(#677A7E,#d7d0d0);
 }
 
 
 
 /***********************************DISEÑO DEL HEADER*************************************/
 
-header{
-    height: 230px;
-}
 
 
 /**DISEÑO DE LOGO DTMLJC+**/
 .logosrc{
-    width: 204px;
-    height: 210px;
-    box-shadow: 15px 15px 2px #00000025;
+    width: 150px;
+    height: 150px;
+    margin:10px 0 0 10px;
+    box-shadow: 15px 15px 10px #00000076;
+    border-radius: 20px;
+    opacity: 90%;
+
 }
 
 
@@ -46,14 +47,14 @@ header{
     height: 320px;
     font-size: 25px;
     outline: none;
-    color:#4C3B1B;
+    color: rgb(30 57 105);
     border : 0; 
 
 }
 
 
 .mensaje-inicial::placeholder{
-    color:#4C3B1B;
+    color: rgb(30 57 105);
     font-size:25px;
     text-shadow: 3px 4px 2px #00000025;
 }
@@ -75,11 +76,12 @@ header{
     width: 357px;
     height: 57px;
     border-radius: 10px;
-    background: #8FBAAB;
-    color:#5F3030;
-    font-size: 20px;
+    color: rgb(30 57 105);
+    font-size: 22px;
     border:0;
-    box-shadow: 0 0 9px #000000;
+    background: linear-gradient(#4a5c60, #d2d1cf);
+    box-shadow: 0 0 100px #4d585f;
+    
 }
 
 
@@ -89,11 +91,12 @@ header{
     width: 357px;
     height: 57px;
     border-radius: 10px;
-    background: #8FBAAB;
-    color:#5F3030;
-    font-size: 20px;
+    color: rgb(30 57 105);
+    font-size: 22px;
     border: 0;
-    box-shadow: 0 0 9px #000000;
+    background: linear-gradient(#4a5c60, #d2d1cf);
+    box-shadow: 0 0 100px #4d585f;
+    
 
 }
 
@@ -103,14 +106,15 @@ header{
 /**DISEÑO CAJA DE ENCRIPTADO FINAL**/
 
 .encriptado-final{
-    background:linear-gradient(#50503C,#787853 ,#d7d775,#50503C);
-    opacity: 1;
     display: inline-block;
     width: 650px;
     height: 651px;
     margin:50px 0 50px 185px;
     padding: 8px 0 0 0;
     border-radius: 15px;
+    background: linear-gradient(#4a5c60, #aba7a0);
+    box-shadow: 0 0 1000px #4d585f;
+    border: 0;
     float:left;
     
 }
@@ -140,39 +144,87 @@ header{
 
 
 
-/**DISEÑO DEL BLOQUE IMAGEN**/
+/**DISEÑO DEL BLOQUE TEXTOS**/
 
 
-.bloque-imagen{
-    width:610px ;
+.bloque-textos{
+    width: 400px;
+    float: left;
 }
-.encriptado-final h1{
+
+
+.bloque-textos h1{
     display: inline-block;
-    width: auto;
-    font-size: 20px;
-    color:#311212;
-    margin: 60px 0 0 40px;
+    font-size: 22px;
+    color: rgb(30 57 105);
+    margin: 100px 0 0 40px;
+    text-align: center;
     
 }
 
 
-.encriptado-final p {
-    font-size: 20px;
-    color:#311212;
+.bloque-textos p {
+    font-size: 22px;
+    color: rgb(30 57 105);
     display: inline-block;
     margin: 10px 0 0 20px;
+    text-align: center;
 }
 
 
 
 /**DISEÑO DEL LOGO DRAGON**/
 
-.logo-dragon{
-    display: inline-block;
-    width: 200px;
-    height:200px;
+
+.bloque-imagen{
+    width: 240px;
+    height: 260px;
+    float:right;
     
 }
+
+.logo-dragon{
+    height: 260px;
+    
+}
+
+
+
+/***********************************DISEÑO DEL FOOTER*************************************/
+
+
+
+.logoAlura{
+    width: 29px;
+    height: 25px;
+    margin: 0 0 0 500px;
+    float: left;
+  
+}
+
+footer p {
+    display: inline-block;
+    font-size: 15px;
+    color: #000000;
+    margin: 7px 0 0 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
