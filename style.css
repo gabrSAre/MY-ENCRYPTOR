@@ -203,13 +203,13 @@ main{
 
 
 footer{
-    background:linear-gradient(#37464966,#173841c4);
+    background-image: url(imagenes/FOND.JPG);
     height: 250px;
 }
 
 .logoAlura{
-    width: 29px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     margin: 110px 0 0 520px;
     float: left;
 }
@@ -222,8 +222,8 @@ footer{
 footer p {
     display: inline-block;
     font-size: 15px;
-    color: #000000;
-    margin: 115px 0 0 1em;
+    color: #FFFFFF;
+    margin: 119px 0 0 1em;
 }
 
 
@@ -279,13 +279,11 @@ footer p {
        
     footer{
         width: 650px;
-        height: 250px;
     }
     
     .logoAlura{
-        width: 29px;
+        width: 30px;
         height: 30px;
-        float: left;
         margin: 90px 0 0 300px;
     }
     
@@ -296,65 +294,6 @@ footer p {
 }
 
 
-/*********************************DISEÑO PARA TABLETS**********************************/
-
-@media screen and (max-width:1280px){
-
-
-    main{
-        display:inline;
-    }
-    
-    .encriptado-inicial,.encriptado-final{
-        width: auto;
-        height: 650px;
-        margin: 45px;
-        padding: 10px;
-    }
-    
-    
-    .boton-encriptar,.boton-desencriptar{
-         margin: 15px 80px 15px 80px;
-    }
-    
-        
-    
-    .mensaje-inicial,.mensaje-final{
-        margin: 0 102px;
-        padding: 24px;
-        width: auto;
-        height: 380px;
-    }
-    
-    .encriptado-final h1{
-        width: 300px;
-        margin: 70px 10px 10px 130px;
-        
-    }
-    
-    .encriptado-final p{
-        width: 300px;
-        margin: 10px 10px 10px 130px;
-        
-    }
-    
-       
-    footer{
-        width: auto;
-        height: 250px;
-    }
-    
-    .logoAlura{
-        width:30px;
-        height:30px;
-        margin:100px 10px 0 100px;
-    }
-    
-    footer p {
-       margin: 110px 0 0 10px;
-    }
-
-}
 
 
 
