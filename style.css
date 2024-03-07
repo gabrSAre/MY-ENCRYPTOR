@@ -4,7 +4,6 @@ body{
 }
 
 
-
 /***********************************DISEÑO DEL HEADER*************************************/
 
 
@@ -23,39 +22,44 @@ body{
     transition:1s;
 }
 
+
 /***********************************DISEÑO DEL MAIN*************************************/
 
 
 main{
+    width: fit-content;
+    margin:0 auto;
     display: flex;
 }
 
 
+
 /**DISEÑO CAJA DE ENCRIPTADO INICIAL**/
 
+
 .encriptado-inicial{
-    display: inline-block;
-    width: 650px;
-    height: 651px;
-    margin:50px 0 50px 90px;
-    padding: 8px 0 0 0;
+    width: 600px;
+    height:781px;
+    margin: 0 10px 10px 100px;
 }
+
 
 /**DISEÑO DE LA TEXTAREA INICIAL**/
 
-.mensaje-inicial{
+
+.mensaje-inicial {
     background:transparent;
-    margin:0 0 92px 102px;
-    padding: 24px;
-    width: 440px;
-    height: 320px;
+    padding:24px;
+    width: 400px;
+    height: 480px;
     font-size: 25px;
-    outline: none;
     color: rgb(30 57 105);
-    border : 0; 
-
+    position: relative;
+    top: 5%;
+    left: 15%;
+    outline: none;
+    border : 0;
 }
-
 
 .mensaje-inicial::placeholder{
     color: rgb(30 57 105);
@@ -66,27 +70,36 @@ main{
 
 /**DISEÑO PARRAFO INDICATIVO A LOS BOTONES**/
 
-.encriptado-inicial p{
+
+.encriptado-inicial p {
+    display: inline-block;
+    position: relative;
+    top: 10%;
+    left: 23%;
+    color: #000000;
     font-size: 20px;
-    margin: 0 0 9px 130px;
 }
 
 
 /**DISEÑO DE LOS BOTONES**/
 
-.boton-encriptar,.boton-desencriptar{
+
+.boton-encriptar, .boton-desencriptar {
     display: block;
-    margin:0 0 15px 95px;
-    width: 357px;
+    position: relative;
+    top: 10%;
+    left: 17%;
+    width: 355px;
     height: 57px;
+    margin: 10px;
     border-radius: 10px;
     color: rgb(30 57 105);
     font-size: 22px;
-    border:0;
+    border: 0;
     background: linear-gradient(#4a5c60, #d2d1cf);
     box-shadow: 0 0 100px #4d585f;
-    
 }
+
 
 .boton-encriptar:hover{
     cursor: pointer;
@@ -101,40 +114,40 @@ main{
 
 /**DISEÑO CAJA DE ENCRIPTADO FINAL**/
 
+
 .encriptado-final{
-    display: inline-block;
-    width: 650px;
-    height: 651px;
-    margin:50px 0 50px 185px;
-    padding: 8px 0 0 0;
+    width: 600px;
+    height:781px;
+    margin: 0 0 10px 250px; 
     border-radius: 15px; 
-    background: no-repeat url(imagenes/dragon-removebg-preview.png),linear-gradient(#4a5c60, #aba7a0);
+    background:no-repeat url(imagenes/dragon-removebg-preview.png),linear-gradient(#4a5c60,#aba7a0);
     background-position:bottom 1px right -10px;
     background-size:260px ;
     box-shadow: 0 0 10px 5px #4d585f;
-    border: 0;   
+    border: 0; 
 }
+
 
 .encriptado-final:hover{
     cursor:progress;
 }
 
 
-
-
 /**DISEÑO DEL LA TEXTAREA FINAL**/
+
 
 .mensaje-final{
     background:transparent;
-    margin:20px 0 0 110px;
     padding: 24px;
-    width: 440px;
-    height: 320px;
+    width: 400px;
+    height: 480px;
     font-size: 25px;
-    outline: none;
     color:#FFFFFF;
+    position:relative;
+    top:5%;
+    left:15%;
+    outline: none;
     border : 0; 
-
 }
 
 
@@ -144,37 +157,43 @@ main{
 
 
 
-
-
 /**DISEÑO DEL TITULO h1 Y DEL PARRAFO**/
 
 
-.encriptado-final h1{
+.encriptado-final h1 {
     display: inline-block;
-    font-size: 22px;
-    color: rgb(30 57 105);
-    margin: 100px 0 0 40px;
+    position: relative;
+    width: 300px;
     text-align: center;
-}
-
-
-.encriptado-final p{
-    font-size: 22px;
+    margin: 100px 0 0 90px;
     color: rgb(30 57 105);
-    display: inline-block;
-    margin: 10px 0 0 20px;
-    text-align: center;
+    font-size: 20px;
 }
 
 
 
-/**DISEÑO BOTON COPIAR **/
+.encriptado-final p {
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    text-align: center;
+    margin: 5px 0 0 89px;
+    color: rgb(30 57 105);
+    font-size: 18px;
+}
+
+
+
+/**DISEÑO DEL BOTON COPIAR**/
 
 .boton-copiar{
     display: block;
-    margin:120px 0 0 145px;
-    width: 357px;
+    position: relative;
+    top: 16%;
+    left: 17%;
+    width: 355px;
     height: 57px;
+    margin: 10px;
     border-radius: 10px;
     color: rgb(30 57 105);
     font-size: 22px;
@@ -184,46 +203,42 @@ main{
 }
 
 
-.boton-copiar:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
-
-
-
-
-
-
-
 
 
 /***********************************DISEÑO DEL FOOTER*************************************/
 
 
-
 footer{
+    
+    
+    height: 290px;
     background-image: url(imagenes/FOND.JPG);
-    height: 250px;
+   
+    
 }
 
-.logoAlura{
+
+.pie-pagina{
+    display:flex;
+    place-items: center;
+    width: 568px;
+    height: 100px;
+    padding: 10px;
+    margin: 0 auto;
+    position: relative;
+    top: 80px;   
+}
+
+
+.logoAlura {
     width: 35px;
     height: 35px;
-    margin: 110px 0 0 520px;
-    float: left;
-}
-
-.logoAlura:hover{
-    transform: scale(1.2);
-    cursor:cell;
+    padding: 0 10px 0 15px;       
 }
 
 footer p {
     display: inline-block;
-    font-size: 15px;
-    color: #FFFFFF;
-    margin: 119px 0 0 1em;
+    color: #FFFFFF;  
 }
 
 
@@ -231,71 +246,28 @@ footer p {
 
 
 
-/*********************************DISEÑO PARA CELULARES**********************************/
 
+/**************************DISEÑO PARA OTROS DISPOSITIVOS********************************/
 
-
-@media screen and (max-width:480px){
-
+@media screen and (max-width:1280px){
 
     main{
-        display: inline;
+         display:grid;
     }
 
     .encriptado-inicial,.encriptado-final{
-    
-        width: auto;
-        height: 650px;
-        margin: 45px;
-        padding: 10px;
+        margin:15px;
     }
 
-    .boton-encriptar,.boton-desencriptar{
-        margin: 15px 80px 15px 80px;
-    }
-    
-        
-    
-    .mensaje-inicial,.mensaje-final{
-        margin: 0 102px;
-        padding: 24px;
-        width: auto;
-        height: 380px;
-    }
-    
-    .encriptado-final h1{
-        width: 300px;
-        margin: 70px 50px 10px 50px;
-        
+}
 
-    }
-    
-    .encriptado-final p{
-        width: 300px;
-        margin: 10px 50px 10px 50px;
-       
-    }
-    
-       
+@media screen and (max-width:625px){
     footer{
-        width: 650px;
-    }
-    
-    .logoAlura{
-        width: 30px;
-        height: 30px;
-        margin: 90px 0 0 300px;
-    }
-    
-    footer p {
-       margin: 10px 0 0 90px;
+        width: 626px;
     }
 
 }
 
 
 
-
-
-
-/*DTMLJC+*/
+/**DTMLJC+**/
