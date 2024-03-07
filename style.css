@@ -267,6 +267,10 @@ footer p {
     }
 
     .encriptado-inicial,.encriptado-final{
+        margin:25px;
+    }
+
+    .encriptado-final{
         margin:20px;
     }
 
