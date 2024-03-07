@@ -266,6 +266,12 @@ footer p {
         width: 626px;
     }
 
+    .encriptado-inicial,.encriptado-final{
+        margin:15px;
+    }
+
+   
+
 }
 
 
