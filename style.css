@@ -52,7 +52,7 @@ main{
     padding:24px;
     width: 400px;
     height: 480px;
-    font-size: 25px;
+    font-size: 30px;
     color: rgb(30 57 105);
     position: relative;
     top: 5%;
@@ -63,7 +63,7 @@ main{
 
 .mensaje-inicial::placeholder{
     color: rgb(30 57 105);
-    font-size:25px;
+    font-size:30px;
     text-shadow: 3px 4px 2px #00000025;
 }
 
@@ -94,7 +94,7 @@ main{
     margin: 10px;
     border-radius: 10px;
     color: rgb(30 57 105);
-    font-size: 22px;
+    font-size: 25px;
     border: 0;
     background: linear-gradient(#4a5c60, #d2d1cf);
     box-shadow: 0 0 100px #4d585f;
@@ -141,7 +141,7 @@ main{
     padding: 24px;
     width: 400px;
     height: 480px;
-    font-size: 25px;
+    font-size: 30px;
     color:#FFFFFF;
     position:relative;
     top:5%;
@@ -196,7 +196,7 @@ main{
     margin: 10px;
     border-radius: 10px;
     color: rgb(30 57 105);
-    font-size: 22px;
+    font-size: 25px;
     border: 0;
     background: linear-gradient(#4a5c60, #d2d1cf);
     box-shadow: 0 0 100px #4d585f;
