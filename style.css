@@ -261,9 +261,9 @@ footer p {
 
 }
 
-@media screen and (max-width:625px){
+@media screen and (max-width:480px){
     footer{
-        width: 626px;
+        width: 660px;
     }
 
     .encriptado-inicial{
@@ -271,7 +271,7 @@ footer p {
     }
 
     .encriptado-final{
-        margin:20px;
+        margin:29px;
     }
 
    
