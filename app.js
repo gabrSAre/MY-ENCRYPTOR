@@ -1,45 +1,41 @@
-let numeroSecreto= Math.floor(Math.random()*1000)+1;
-console.log(numeroSecreto);
-let numeroUsuario=0;
-let intentos=1;
+window.onload;
 
+function modificarTexto(elemento){
+    let desaparecerTexto=document.getElementById(elemento);
+    desaparecerTexto.innerHTML="";
+}
 
-
-while(numeroUsuario!=numeroSecreto){
+function modificarEstilos(elementoId){
+    let estilo=document.getElementById(elementoId).style;
+    estilo.backgroundColor="red";
     
+}
 
-    numeroUsuario = parseInt(prompt('ingresa un número entre 1 y 10')); 
-    console.log(typeof(numeroUsuario));
-
-    
-
-    if(numeroUsuario==numeroSecreto){
-
-        alert(`Adivinaste en ${intentos} ${intentos==1? 'vez':'veces'} , el numero secreto es: ${numeroUsuario}`);
-    }
-
-    else if(numeroUsuario>numeroSecreto){
-        alert('El número secreto es menor');
-    }
-
-    else{
-        alert('El número secreto es mayor');
-    }
-
-    
-    if(intentos==10){
-        alert('Perdiste, el número de intentos se agotó');
-        break;
-    }
-
-   intentos++;
-
- 
+function agregarTexto(elemento,texto){
+    let desaparecerTexto=document.getElementById(elemento);
+    desaparecerTexto.innerHTML=texto;
 
 }
- 
-   
-     
+
+
+
+function alerta(){
+    modificarTexto('titulo');
+    modificarTexto('parrafo');
+    modificarEstilos("cajaFinal");
+}
+
+
+
+function aterla(){
+    agregarTexto('titulo', 'NINGÚN MENSAJE FUÉ ENCONTRADO');
+    agregarTexto('parrafo', 'Ingresa el texto que deseas encriptar o desencriptar');
+
+}
+
+
+
+
    
     
 
