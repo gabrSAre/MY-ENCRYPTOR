@@ -41,23 +41,73 @@ function crearBoton(){
     estilo.background='linear-gradient(#4a5c60, #d2d1cf)';
     estilo.boxShadow='0 0 100px #4d585f';
     estilo.cursor='pointer';  
+    
+    ///////////EVENTOS///////////
+    
+    let evento=document.getElementById('cajaFinal').appendChild(boton).onclick;
+    evento=eliminar;
+
 }
+
+//************************************FUNCION PRUEBA************************************//
+
+function eliminar(){
+    let desaparecerTexto=document.getElementById('areaTexto2');
+    desaparecerTexto.innerHTML="hola";
+}
+
+
+
+
+
+
+
+
+//**************************FUNCION ELIMINAR DRAGON************************************//
+
+function eliminarDragon(elemento){
+    document.getElementById(elemento).style.background="linear-gradient(#4a5c60,#aba7a0)";
+}
+
+
+//***************************FUNCIONES CAPTURAR TEXTO***********************************//
+
+function capturar(){
+    let texto=document.getElementById('areaTexto1').value;
+    console.log(texto);
+    return texto;
+} 
+
+
+//***************************FUNCION TRASPORTAR TEXTO***********************************//
+
+function trasportar(){
+    let texto=document.getElementById('areaTexto2');
+    texto.innerHTML=capturar();
+}
+
+
+
+//***************************FUNCIONES ENCRIPTAR Y DESENCRIPTAR*************************//
 
 function encriptar(){
     eliminarTexto('titulo');
     eliminarTexto('parrafo');
-    document.getElementById("cajaFinal").style.background="linear-gradient(#4a5c60,#aba7a0)";
+    eliminarDragon('cajaFinal');
     crearBoton();
-
-
+    trasportar();
+    
 
 }
 
 function desencriptar(){
+
+    
     eliminarTexto('titulo');
     eliminarTexto('parrafo');
-    document.getElementById("cajaFinal").style.background="linear-gradient(#4a5c60,#aba7a0)";
+    eliminarDragon('cajaFinal');
     crearBoton();
+    
 
 }
 
