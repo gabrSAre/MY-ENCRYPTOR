@@ -20,14 +20,14 @@
         <main>
         
             <section class="encriptado-inicial">
-                <textarea id="areaTexto1" class="mensaje-inicial" required placeholder="ingrese su texto aquí..."></textarea>
+                <textarea id="mensaje-inicial" class="mensaje-inicial" required placeholder="ingrese su texto aquí..."></textarea>
                 <P>Solo letras minúsculas y sin acentos</P>
-                <button onclick="encriptar();"class="boton-encriptar">Encriptar</button>
-                <button onclick="desencriptar();" class="boton-desencriptar">Desencriptar<button>
+                <button onclick="encriptar();"class="boton-encriptar" id="boton-encriptar" disabled>Encriptar</button>
+                <button onclick="desencriptar();" class="boton-desencriptar" id="boton-desencriptar" disabled>Desencriptar<button>
             </section>
 
-            <section class="encriptado-final" id="cajaFinal">
-                <textarea id="areaTexto2" class="mensaje-final"></textarea> 
+            <section class="encriptado-final" id="encriptado-final">
+                <textarea id="mensaje-final" class="mensaje-final"></textarea> 
                 <h1 id="titulo">NINGÚN MENSAJE FUÉ ENCONTRADO</h1>
                 <P id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</P>
             </section>

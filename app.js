@@ -1,3 +1,33 @@
+let mensajeDinicio=document.getElementById('mensaje-inicial');
+let botonEncriptar=document.getElementById('boton-encriptar');
+
+
+mensajeDinicio.addEventListener('keyup',validar);
+
+
+
+
+//************************************METODO VALIDAR*************************************//
+
+
+function validar(){
+    let deshabilitar=false;
+    
+    if
+
+
+
+
+
+}
+
+
+
+//***********************************ZONA DE FUNCIONES***********************************//
+/*****************************************************************************************/
+
+
+
 
 
 //*****************FUNCIONES PARA MODIFICAR TITULOS Y PARRAFOS***************************//
@@ -7,26 +37,22 @@ function eliminarTexto(elemento){
     desaparecerTexto.innerHTML="";
 }
 
-function agregarTexto(elemento,texto){
-    let insertarTexto=document.getElementById(elemento);
-    insertarTexto.innerHTML=texto;
-}
 
-
-
-
-//****************FUNCIONES RELACIONADAS A EVENTOS CON LOS BOTONES***********************//
+//*************************FUNCIÓN RELACIONADA CON EL BOTON******************************//
 
 
 /**FUNCIÓN CREAR BOTON**/
 
-function crearBoton(){
+function botonCopiar(){
+
+    //CREAR BOTON COPIAR
    
     const boton=document.createElement('button');
-    boton.type='button';
     boton.innerText='Copiar';
-    document.getElementById('cajaFinal').appendChild(boton);
-    let estilo=document.getElementById('cajaFinal').appendChild(boton).style;
+    document.getElementById('encriptado-final').appendChild(boton);
+
+    //ESTILIZAR BOTON COPIAR
+    let estilo=document.getElementById('encriptado-final').appendChild(boton).style;
     estilo.display='block';
     estilo.position='relative';
     estilo.top='2%';
@@ -42,23 +68,31 @@ function crearBoton(){
     estilo.boxShadow='0 0 100px #4d585f';
     estilo.cursor='pointer';  
     
-    ///////////EVENTOS///////////
+    //ASIGNANDO EVENTOS AL BOTON COPIAR
+    document.getElementById('encriptado-final').appendChild(boton).onclick=eliminar;
     
-    let evento=document.getElementById('cajaFinal').appendChild(boton).onclick;
-    evento=eliminar;
 
 }
 
-//************************************FUNCION PRUEBA************************************//
+
+
+
+//*****************************FUNCION ELIMINAR TEXTO************************************//
 
 function eliminar(){
-    let desaparecerTexto=document.getElementById('areaTexto2');
-    desaparecerTexto.innerHTML="hola";
+    let desaparecerTexto=document.getElementById('mensaje-final');
+    desaparecerTexto.innerHTML=" "; 
 }
 
 
 
 
+//***************************FUNCIÓN HABILITAR BOTONES***********************************//
+
+
+function habilitar(){
+    document.getElementById('boton-encriptar').removeAttribute('disabled');
+}
 
 
 
@@ -70,19 +104,21 @@ function eliminarDragon(elemento){
 }
 
 
+
 //***************************FUNCIONES CAPTURAR TEXTO***********************************//
 
 function capturar(){
-    let texto=document.getElementById('areaTexto1').value;
+    let texto=document.getElementById('mensaje-inicial').value;
     console.log(texto);
     return texto;
 } 
 
 
+
 //***************************FUNCION TRASPORTAR TEXTO***********************************//
 
 function trasportar(){
-    let texto=document.getElementById('areaTexto2');
+    let texto=document.getElementById('mensaje-final');
     texto.innerHTML=capturar();
 }
 
@@ -93,8 +129,8 @@ function trasportar(){
 function encriptar(){
     eliminarTexto('titulo');
     eliminarTexto('parrafo');
-    eliminarDragon('cajaFinal');
-    crearBoton();
+    eliminarDragon('encriptado-final');
+    botonCopiar();
     trasportar();
     
 
@@ -105,8 +141,8 @@ function desencriptar(){
     
     eliminarTexto('titulo');
     eliminarTexto('parrafo');
-    eliminarDragon('cajaFinal');
-    crearBoton();
+    eliminarDragon('encriptado-final');
+    botonCopiar();
     
 
 }
