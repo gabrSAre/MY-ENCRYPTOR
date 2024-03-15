@@ -236,6 +236,11 @@ footer{
     padding: 0 10px 0 15px;       
 }
 
+.logoAlura:hover{
+    opacity:30%;
+    transition:1ms;
+}
+
 footer p {
     display: inline-block;
     color: #FFFFFF;  

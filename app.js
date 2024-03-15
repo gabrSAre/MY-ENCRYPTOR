@@ -1,5 +1,7 @@
+let cont=0;  
 let mensajeDinicio=document.getElementById('mensaje-inicial');
 let botonEncriptar=document.getElementById('boton-encriptar');
+let botonDesEncriptar=document.getElementById('boton-desencriptar');
 
 
 mensajeDinicio.addEventListener('keyup',validar);
@@ -23,10 +25,12 @@ function validar(){
 
     if(deshabilitar==true){
         botonEncriptar.disabled=true;
+        botonDesEncriptar.disabled=true;
     }
 
     else{ 
         botonEncriptar.disabled=false;
+        botonDesEncriptar.disabled=false;
     }
 
 
@@ -36,23 +40,16 @@ function validar(){
 //***************************FUNCIONES ENCRIPTAR Y DESENCRIPTAR*************************//
 
 function encriptar(){
-    eliminarTexto('titulo');//Borra el titulo h1
-    eliminarTexto('parrafo');//Borra el parrafo que acompaña el h1
-    eliminarDragon('encriptado-final');//Estiliza el backgroun, pero sin la imagen dragon
     trasportar();//Toma el texto del id mensaje-inicial y lo lleva al id mensaje-final
    // deshabilitar();//Deshabilita el bonton encriptar
-    validarTexto();
+    validarTexto();//Permite que el boton Copiar sea creado solamente una vez.
 }
 
 function desencriptar(){
-
+    trasportar();//Toma el texto del id mensaje-inicial y lo lleva al id mensaje-final
+   // deshabilitar();//Deshabilita el bonton encriptar
+    validarTexto();//Permite que el boton Copiar sea creado solamente una vez.
     
-    eliminarTexto('titulo');
-    eliminarTexto('parrafo');
-    eliminarDragon('encriptado-final');
-    
-    
-
 }
 
 
@@ -78,8 +75,17 @@ function eliminarDragon(elemento){
 //***************************FUNCION TRASPORTAR TEXTO***********************************//
 
 function trasportar(){
-    let texto=document.getElementById('mensaje-final');
-    texto.innerHTML=capturar();
+    let valor=capturar();
+    let textoa=document.getElementById('mensaje-inicial');
+    let textob=document.getElementById('mensaje-final');
+    textob.innerHTML=valor;
+
+    if(textob!=""){
+       textoa.innerHTML=" ";
+    }
+
+ 
+    
 }
 
 
@@ -95,38 +101,31 @@ function capturar(){
 
 //***************************FUNCIÓN VALIDAR TEXTO*********************************//
 
+let mensajeFinal=document.getElementById('mensaje-final');
+mensajeFinal.addEventListener('keyup',validarTexto);
+
+
 function validarTexto(){
-    let mensajeFinal=document.getElementById('mensaje-final');
-
-
-    if(mensajeFinal==""){
-        botonCopiar();
-    }
-
-
-
-}
-
-
-
-
-//****************************FUNCIÓN DESHABILITAR*********************************//
-
-function deshabilitar(){
-    botonEncriptar.disabled=true;
-}
-
-
-
-
-//*****************************FUNCION ELIMINAR************************************//
-
-function eliminar(){
-    let desaparecerTexto=document.getElementById('mensaje-final');
-    desaparecerTexto.innerHTML=" "; 
     
 
+    if(mensajeFinal!=""){
+        while(cont<1){
+            
+            eliminarTexto('titulo');//Borra el titulo h1
+            eliminarTexto('parrafo');//Borra el parrafo que acompaña el h1
+            eliminarDragon('encriptado-final');//Estiliza el backgroun, pero sin la imagen dragon
+            botonCopiar();//Crea el boton copiar
+
+           
+            cont++;
+        }
+    }
+  
 }
+
+
+
+
 
 
 //*************************FUNCIÓN RELACIONADA CON EL BOTON******************************//
@@ -160,7 +159,7 @@ function botonCopiar(){
     estilo.cursor='pointer';  
     
     //ASIGNANDO EVENTOS AL BOTON COPIAR
-    document.getElementById('encriptado-final').appendChild(boton).onclick=eliminar;
+    //document.getElementById('encriptado-final').appendChild(boton).onclick=eliminar;
     
 
 }
