@@ -76,16 +76,8 @@ function eliminarDragon(elemento){
 
 function trasportar(){
     let valor=capturar();
-    let textoa=document.getElementById('mensaje-inicial');
-    let textob=document.getElementById('mensaje-final');
-    textob.innerHTML=valor;
-
-    if(textob!=""){
-       textoa.innerHTML=" ";
-    }
-
- 
-    
+    let texto=document.getElementById('mensaje-final');
+    texto.innerHTML=valor;
 }
 
 
@@ -115,9 +107,8 @@ function validarTexto(){
             eliminarTexto('parrafo');//Borra el parrafo que acompaña el h1
             eliminarDragon('encriptado-final');//Estiliza el backgroun, pero sin la imagen dragon
             botonCopiar();//Crea el boton copiar
-
-           
             cont++;
+            
         }
     }
   
