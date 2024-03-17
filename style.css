@@ -150,6 +150,9 @@ main{
     border : 0; 
 }
 
+.mensaje-final::selection{
+    background-color: transparent;
+}
 
 .mensaje-final:hover{
     cursor:progress;

@@ -1,3 +1,4 @@
+//***********************************ZONA DE variables***********************************//
 let cont=0;  
 let mensajeDinicio=document.getElementById('mensaje-inicial');
 let botonEncriptar=document.getElementById('boton-encriptar');
@@ -43,6 +44,7 @@ function encriptar(){
     trasportar();//Toma el texto del id mensaje-inicial y lo lleva al id mensaje-final
    // deshabilitar();//Deshabilita el bonton encriptar
     validarTexto();//Permite que el boton Copiar sea creado solamente una vez.
+   
 }
 
 function desencriptar(){
@@ -78,6 +80,8 @@ function trasportar(){
     let valor=capturar();
     let texto=document.getElementById('mensaje-final');
     texto.innerHTML=valor;
+    limpiar();
+    return false;
 }
 
 
@@ -86,8 +90,53 @@ function trasportar(){
 
 function capturar(){
     let texto=document.getElementById('mensaje-inicial').value;
-    return texto;
+    return arreglo(texto);
+    
 } 
+
+//********************************FUNCION ARREGLO ************************************//
+
+ function arreglo(elemento){
+    let encr=[];
+    let vector=elemento;
+    vector=vector.toLowerCase().split("");
+
+    for(i=0;i<vector.length;i++){
+        encr.push(palabra[i]);
+        if(encr[i]=='a'){
+           encr[i]='ai';
+        }
+        else if(encr[i]=='e'){
+            encr[i]='enter';
+        }
+        else if(encr[i]=='i'){
+            encr[i]='imes';
+        }
+        else if(encr[i]=='o'){
+            encr[i]='ober';
+        }
+        else if(encr[i]=='u'){
+            encr[i]='ufat';
+        }
+
+        
+    }
+     
+       let unir=encr.join("");
+
+       return unir;
+
+}
+
+
+
+//********************************FUNCION LIMPIAR ************************************//
+
+function limpiar(){
+    let reseteo=document.getElementById('encriptado-inicial');
+    reseteo.reset();
+}
+
 
 
 
@@ -98,7 +147,8 @@ mensajeFinal.addEventListener('keyup',validarTexto);
 
 
 function validarTexto(){
-    
+
+    let textarea1=document.getElementById('mensaje-inicial').value;
 
     if(mensajeFinal!=""){
         while(cont<1){
@@ -110,6 +160,10 @@ function validarTexto(){
             cont++;
             
         }
+
+        
+
+
     }
   
 }
@@ -119,10 +173,13 @@ function validarTexto(){
 
 
 
+
+
+
+
 //*************************FUNCIÓN RELACIONADA CON EL BOTON******************************//
 
 
-/**FUNCIÓN CREAR BOTON**/
 
 function botonCopiar(){
 
@@ -144,16 +201,27 @@ function botonCopiar(){
     estilo.borderRadius='10px';
     estilo.color='rgb(30 57 105)';
     estilo.fontSize='25px';
-    estilo.border= '0';
+    //estilo.border= '0';
     estilo.background='linear-gradient(#4a5c60, #d2d1cf)';
     estilo.boxShadow='0 0 100px #4d585f';
-    estilo.cursor='pointer';  
+    estilo.cursor='pointer';   
     
     //ASIGNANDO EVENTOS AL BOTON COPIAR
-    //document.getElementById('encriptado-final').appendChild(boton).onclick=eliminar;
+    document.getElementById('encriptado-final').appendChild(boton).onclick=copiarText;
+    
     
 
 }
+
+function copiarText(){
+    let copiar=document.getElementById('mensaje-final');
+    copiar.select();
+    copiar.setSelectionRange(0 , 99999);
+    navigator.clipboard.writeText(copiar.value);
+
+}
+
+
 
 
 
