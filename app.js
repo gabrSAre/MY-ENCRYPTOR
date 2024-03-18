@@ -77,11 +77,13 @@ function eliminarDragon(elemento){
 //***************************FUNCION TRASPORTAR TEXTO***********************************//
 
 function trasportar(){
+    let vec="";
     let valor=capturar();
     let texto=document.getElementById('mensaje-final');
-    texto.innerHTML=valor;
+    vec=arreglo(valor);
+    texto.innerHTML=vec;
     limpiar();
-    return false;
+    return false;  
 }
 
 
@@ -90,17 +92,17 @@ function trasportar(){
 
 function capturar(){
     let texto=document.getElementById('mensaje-inicial').value;
-    return arreglo(texto);
+    return (texto);
     
 } 
 
-//********************************FUNCION ARREGLO ************************************//
 
- function arreglo(elemento){
+//*******************************FUNCION ARREGLO/ARRAY*******************************//
+function arreglo(elemento){
     let encr=[];
     let vector=elemento;
-    vector=vector.toLowerCase().split("");
-
+    vector=vector.toLowerCase().split("");                               
+    
     for(i=0;i<vector.length;i++){
         encr.push(palabra[i]);
         if(encr[i]=='a'){
@@ -118,14 +120,12 @@ function capturar(){
         else if(encr[i]=='u'){
             encr[i]='ufat';
         }
-
-        
     }
      
        let unir=encr.join("");
-
        return unir;
-
+       
+    
 }
 
 
@@ -148,7 +148,7 @@ mensajeFinal.addEventListener('keyup',validarTexto);
 
 function validarTexto(){
 
-    let textarea1=document.getElementById('mensaje-inicial').value;
+    
 
     if(mensajeFinal!=""){
         while(cont<1){

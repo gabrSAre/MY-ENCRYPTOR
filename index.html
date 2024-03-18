@@ -19,13 +19,13 @@
 
         <main>
         
-            <form id="encriptado-inicial" class="encriptado-inicial">
+            <section id="encriptado-inicial" class="encriptado-inicial">
                 <textarea type="text" id="mensaje-inicial" class="mensaje-inicial" required placeholder="ingrese su texto aquí..."></textarea>
                 <P>Solo letras minúsculas y sin acentos</P>
-                <button  onclick="return encriptar();"class="boton-encriptar" id="boton-encriptar" disabled>Encriptar</button>
-                <button  onclick="return desencriptar();" class="boton-desencriptar" id="boton-desencriptar" disabled>Desencriptar</button>
+                <button  onclick="encriptar();"class="boton-encriptar" id="boton-encriptar" disabled>Encriptar</button>
+                <button  onclick="desencriptar();" class="boton-desencriptar" id="boton-desencriptar" disabled>Desencriptar</button>
                 
-            </form>
+            </section>
 
             <section class="encriptado-final" id="encriptado-final">
                 <textarea type="text" id="mensaje-final" class="mensaje-final"></textarea> 
