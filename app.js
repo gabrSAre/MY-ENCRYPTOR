@@ -41,15 +41,13 @@ function validar(){
 //***************************FUNCIONES ENCRIPTAR Y DESENCRIPTAR*************************//
 
 function encriptar(){
-    trasportar();//Toma el texto del id mensaje-inicial y lo lleva al id mensaje-final
-   // deshabilitar();//Deshabilita el bonton encriptar
+    encriptador();//Toma el texto del id mensaje-inicial, lo ecripta y lo lleva al id mensaje-final.
     validarTexto();//Permite que el boton Copiar sea creado solamente una vez.
    
 }
 
 function desencriptar(){
-    trasportar();//Toma el texto del id mensaje-inicial y lo lleva al id mensaje-final
-   // deshabilitar();//Deshabilita el bonton encriptar
+    desencriptador();//Desencrita el mensaje entregado en el id mensaje-inicial y lo lleva a su estado original al id mensaje-final
     validarTexto();//Permite que el boton Copiar sea creado solamente una vez.
     
 }
@@ -74,14 +72,91 @@ function eliminarDragon(elemento){
 
 
 
-//***************************FUNCION TRASPORTAR TEXTO***********************************//
+//***************************FUNCION ENCRIPTAR TEXTO***********************************//
 
-function trasportar(){
-    let vec="";
+function encriptador(){
+   
     let valor=capturar();
+    
+    let encriptando=[];
+    let vector=valor;
+    vector=vector.toLowerCase().split("");  
+   
+
+    for(let i=0;i<vector.length;i++){
+        encriptando.push(vector[i]);
+
+        if(encriptando[i]=='a'){
+            encriptando[i]='ai';
+        }
+        else if(encriptando[i]=='e'){
+            encriptando[i]='enter';
+        }
+        else if(encriptando[i]=='i'){
+            encriptando[i]='imes';
+        }
+        else if(encriptando[i]=='o'){
+            encriptando[i]='ober';
+        }
+        else if(encriptando[i]=='u'){
+            encriptando[i]='ufat';
+        }
+
+    }
+         
+    let unir=encriptando.join("");
     let texto=document.getElementById('mensaje-final');
-    vec=arreglo(valor);
-    texto.innerHTML=vec;
+    texto.innerHTML=unir;
+    limpiar();
+    return false;  
+}
+
+
+
+//***************************FUNCION DESENCRIPTAR TEXTO**********************************//
+
+
+function desencriptador(){
+   
+    let valor=capturar();
+    let desencriptando=[];
+    let vector=valor;
+    vector=vector.toLowerCase().split("");  
+    console.log(vector);
+    
+    for(let i=0;i<vector.length;i++){
+        
+
+        if(vector[i]=='a' && vector[i+1]=='i'){
+            desencriptando.push('a');
+            i++;
+        }
+        else if(vector[i]=='e'&& vector[i+1]=='n'&& vector[i+2]=='t'&& vector[i+3]=='e' && vector[i+4]=='r' ){
+            desencriptando.push('e');
+            i=i+4;
+        }
+        else if(vector[i]=='i'&& vector[i+1]=='m'&& vector[i+2]=='e'&& vector[i+3]=='s'){
+            desencriptando.push('i');
+            i=i+3;
+        }
+        else if(vector[i]=='o'&& vector[i+1]=='b'&& vector[i+2]=='e'&& vector[i+3]=='r'){
+            desencriptando.push('o');
+            i=i+3;
+        }
+        else if(vector[i]=='u'&& vector[i+1]=='f'&& vector[i+2]=='a'&& vector[i+3]=='t'){
+            desencriptando.push('u');
+            i=i+3;
+        }
+        else{
+            desencriptando.push(vector[i]);
+        }
+
+
+    }
+         
+    let unir=desencriptando.join("");
+    let texto=document.getElementById('mensaje-final');
+    texto.innerHTML=unir;
     limpiar();
     return false;  
 }
@@ -95,38 +170,6 @@ function capturar(){
     return (texto);
     
 } 
-
-
-//*******************************FUNCION ARREGLO/ARRAY*******************************//
-function arreglo(elemento){
-    let encr=[];
-    let vector=elemento;
-    vector=vector.toLowerCase().split("");                               
-    
-    for(i=0;i<vector.length;i++){
-        encr.push(palabra[i]);
-        if(encr[i]=='a'){
-           encr[i]='ai';
-        }
-        else if(encr[i]=='e'){
-            encr[i]='enter';
-        }
-        else if(encr[i]=='i'){
-            encr[i]='imes';
-        }
-        else if(encr[i]=='o'){
-            encr[i]='ober';
-        }
-        else if(encr[i]=='u'){
-            encr[i]='ufat';
-        }
-    }
-     
-       let unir=encr.join("");
-       return unir;
-       
-    
-}
 
 
 
